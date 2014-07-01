@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>La Potaillote | Jeu de cartes distribué sous licence libre CC BY-SA</title>
+    <meta name="description" content="La Potaillote est un jeu de cartes distribué sous licence libre CC BY-SA." />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/gnutypewriter" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheet.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.smooth-scroll-1.4.13.min.js"></script>
+    <script type="text/javascript" src="js/potaillote.js"></script>
+<body>
+
+<div id="main">
+
+    <h6>[potaiot] n.f. La Potaillote est un jeu de cartes distribué sous licence libre CC BY-SA.</h6>
+
+    <div id="logo">
+        <img src="potaillote.png" width="" height="" alt="La Potaillote" />
+    </div>
+
+    <h1>How-to Play ?!</h1>
+
+    <h2>- Préambule -</h2>
+    <p>
+        La Potaillote est un jeu de cartes se jouant à plusieurs joueurs (minimum 2). La
+        dépose des cartes s'effectue de manière identique à la bataille, dont les ballotages
+        peuvent se résoudre sur la base d'une main de poker. Les valeurs des cartes quant à
+        elles sont calquées sur la belote.
+    </p>
+    <p>
+        D'une manière générale, si les règles ne satisfont pas les joueurs, libre à eux de
+        <a href="http://fr.wikipedia.org/wiki/Fork_%28d%C3%A9veloppement_logiciel%29" target="_blank">forker</a>
+        la Potaillote pour autant qu'ils en respectent la <a href="#license" class="st">licence</a>.
+    </p>
+
+    <div id="goal">
+        Le but du jeu est de remporter toutes les cartes de ses adversaires.
+    </div>
+
+    <h2>- Mise en place -</h2>
+    <p>
+        Une fois les cartes mélangées par le donneur, la distribution des cartes s'effectue à
+        l'aveugle (cartes retournées) dans le sens inverse des aiguilles d'une montre. L'ensemble
+        d'un ou plusieurs jeux de cartes est distribué aux joueurs, qui n'en prennent pas
+        connaissance. Tous les joueurs doivent avoir le même nombre de cartes (tas).
+    </p>
+    <p>
+        Si des cartes ne peuvent être distribuées car leur nombre est insuffisant pour satisfaire
+        tous les joueurs, elles sont déposées au centre du jeu (pot) et seront gagnées par le
+        joueur remportant le premier tour.
+    </p>
+
+    <h2>- Déroulement du jeu -</h2>
+    <p>
+        Chaque joueur retourne la carte du haut de son tas et la dépose au centre du jeu (pot).
+        Le joueur qui a déposé la <a href="#values" class="st">carte de la plus haute valeur</a>
+        (voir également <a href="#specials" class="st">Cartes spéciales</a>) gagne la totalité des
+        cartes présentes dans le pot et les place sous son tas.
+    </p>
+    <p>
+        Le <a href="#ballotage" class="st">ballotage</a> survient dans le cas d'une ou de
+        plusieurs égalités de valeurs. Tous les joueurs concernés par les égalités de valeurs,
+        sans différentiation, font partie du même ballotage.
+    </p>
+
+    <h2 class="st ballotage">- Ballotage -</h2>
+    <p>
+        Le ballotage peut s'effectuer selon deux modes de résolution
+        (<a href="#bataille" class="st">bataille</a> ou <a href="#poker" class="st">poker</a>).
+        Sans intervention de l'un des joueurs concerné par le ballotage, le mode de résolution
+        par la bataille fait foi par défaut.
+    </p>
+    <p>
+        Si au moins un des joueurs concernés par le ballotage annonce <em>"poker"</em> au moment
+        où le ballotage survient, le mode de résolution par le poker fait foi. Une fois le mode
+        <em>"poker"</em> annoncé, il n'est pas possible pour les autres joueurs de s'y opposer.
+    </p>
+    <p>
+        Le gagnant du ballotage remporte le tour et toutes les cartes présentes au centre du jeu
+        (pot). Si un joueur possédait initialement une carte de valeur supérieure à celles
+        impliquées dans le ballotage, la procédure de dernière chance s'applique une fois le
+        ballotage terminé.
+    </p>
+
+    <h3 class="st bataille"># Ballotage : bataille mode #</h3>
+    <p>
+        Dans ce cas, les règles de la bataille classique s'appliquent. Chaque joueur concerné par
+        le ballotage dépose une seconde carte, face cachée, sur sa première carte, puis une
+        troisième carte, face visible, sur ses deux précédentes cartes.
+    </p>
+    <p>
+        Le joueur qui a déposé la <a href="#values" class="st">carte de la plus haute valeur</a>
+        remporte le tour. En cas d'égalité, il suffit de répéter une bataille classique jusqu'à ce
+        que le tour puisse être remporté.
+    </p>
+
+    <h3 class="st poker"># Ballotage : poker mode #</h3>
+    <p>
+        Dans ce cas, les règles d'une main de poker s'appliquent. Chaque joueur concerné par le
+        ballotage dépose une seconde carte, face cachée, sur sa première carte puis peut déposer
+        à choix jusqu'à trois cartes supplémentaires, toujours face cachée, ou choisir de n'en
+        déposer aucune. Les joueurs ne sont pas obligés de déposer le même nombre de cartes entre
+        eux. Une fois que tous les joueurs en ballotage ont déposé leurs cartes supplémentaires,
+        toutes les cartes sont retournées et sont considérées comme des mains de poker hold'em,
+        de deux à cinq cartes.
+    </p>
+    <p>
+        Le joueur qui a déposé la <a href="#holdem" class="st">main de la plus haute valeur</a>
+        remporte le tour. Dans le cas hypothétique où les meilleures mains sont strictement égales,
+        une bataille classique suffira à les départager.
+    </p>
+
+    <h3># Dernière Chance #</h3>
+    <p>
+        La dernière chance permet au joueur possédant une carte de plus haute valeur avant le
+        ballotage d'avoir une ultime possibilité de gagner le tour courant. Sa carte est comparée
+        à la première carte déposée face cachée par le gagnant du ballotage à l'occasion de la
+        première égalité de valeurs.
+    </p>
+    <p>
+        Le joueur qui a déposé la <a href="#values" class="st">carte de la plus haute valeur</a>
+        remporte le tour. En cas d'égalité, il suffit de répéter une bataille classique jusqu'à ce
+        que le tour puisse être remporté.
+    </p>
+
+    <h2>- Combat Ultime - </h2>
+    <p>
+        Quand il ne reste plus que deux joueurs et que le <em>7 de carreau</em> est déposé par un
+        joueur, ce dernier peut demander (sans possibilité de refus) le <em>"Combat Ultime"</em>.
+        Chaque joueur choisi alors 5 cartes dans son jeu, à l'aveugle, qui deviennent une main
+        de poker. Les cartes sont alors retournées pour découvrir la main déposée par chaque joueur.
+    </p>
+    <p>
+        Chaque joueur a alors la possibilité de modifier de 0 à 5 cartes de sa main de poker
+        retournée, en choisissant le nombre de cartes correspondant dans son jeu, toujours à
+        l'aveugle. Le vainqueur du combat ultime, selon la
+        <a href="#holdem" class="st">valeur d'une main de poker</a>, gagne la partie.
+    <p>
+        Le <em>"Combat Ultime"</em> peut être demandé même si le
+        <a href="#seven" class="st"><em>"pouvoir du 7 de carreau"</em></a> a déjà été invoqué
+        lors de la partie.
+    </p>
+
+    <div id="mantra">
+        "Si t'es pas content, tu forkes!" - Mantra
+    </div>
+
+    <h2 class="st specials">- Cartes spéciales - </h2>
+
+    <h3># Joker #</h3>
+    <p>
+        Le <em>joker</em> peut être échangé avec n'importe quelle carte déposée en même temps au
+        centre du jeu, y compris lors d'un <a href="#ballotage" class="st">ballotage</a>. Une fois échangé il
+        n'a plus aucune valeur, et le joueur ne pourra s'en servir qu'au tour suivant. Le jeu sans
+        jokers est également possible.
+    </p>
+    <p>
+        Dans le cas où deux jokers ou plus sont déposés en même temps par au moins deux joueurs
+        différents, ils ne peuvent être échangés, mais le cas est réglé par ballotage. Si
+        plusieurs jokers apparaissent dans la même phase d'un ballotage, leur valeur définitive
+        est définie par la carte issue au final d'une bataille classique.
+    </p>
+
+    <h3 class="st seven"># 7 de carreau #</h3>
+    <p>
+        Lorsqu'un joueur dépose un <em>7 de carreau</em>, quelle que soit la phase du jeu en
+        cours, lui seul peut alors invoquer le <em>"pouvoir du 7 de carreau"</em>. Toutes les
+        cartes alors déposées au centre du jeu sont directement et irrévocablement remportées
+        par le joueur ayant déposé le <em>7 de carreau</em>. Le cas échéant, les ballotages en cours
+        s'arrêtent immédiatement.
+    </p>
+    <p>
+        Aucune autre règle de valeur ne saurait prendre le dessus sur cette invocation. Le
+        <em>pouvoir du 7 de carreau</em> ne peut être invoqué qu'une seule et unique fois par partie,
+        exception faite du <em>"Combat Ultime"</em>. Si un joueur l'invoque une seconde fois,
+        il perd immédiatement et doit déposer la totalité de ses cartes au centre du jeu (pot)
+        qui sera alors gagnée par le joueur remportant le prochain tour.
+    </p>
+
+    <h2 class="st values">- Valeur des cartes -</h2>
+    <p>
+        Les cartes ont une valeur définie selon la hiérarchie du bridge, supplantée des deux atouts
+        principaux de la belote, soit par ordre décroissant :
+    </p>
+    <div class="small border">
+        <p>
+            Valet (appellé <em>Bourg</em>)<br />
+            9 (appellé <em>Nel</em>)<br />
+            As<br />Roi<br />Dame<br />10<br />8<br />7<br />6<br />5<br />4<br />3<br />2
+        </p>
+    </div>
+
+    <h3 class="st holdem"># Main de poker hold'em #</h3>
+    <p>
+        La valeur d'une main de poker est définie comme suit, par ordre décroissant :
+    </p>
+    <div class="small border">
+        <p>
+            * Quinte flush royale *<br />
+            <span class="ex">5 cartes en suite de la même couleur incluant l'as comme meilleure valeur</span><br />
+            * Quinte flush *<br />
+            <span class="ex">5 cartes en suite de même couleur</span><br />
+            * Carré *<br />
+            <span class="ex">4 cartes de la même valeur</span><br />
+            * Full *<br />
+            <span class="ex">un brelan et une paire</span><br />
+            * Flush *<br />
+            <span class="ex">5 cartes de la même couleur</span><br />
+            * Suite *<br />
+            <span class="ex">5 cartes en suite de couleurs différentes</span><br />
+            * Brelan *<br />
+            <span class="ex">3 cartes de la même valeur</span><br />
+            * Double paire *<br />
+            <span class="ex">deux paires</span><br />
+            * Paire *<br />
+            <span class="ex">deux cartes de la même valeur</span><br />
+            * Hauteur *<br />
+            <span class="ex">plus haute valeur de la main</span>
+        </p>
+    </div>
+    <p>
+        Selon la valeur des cartes de la Potaillote, une paire de 9 (nel) vaut plus qu'une paire d'as.
+        A noter que dans l'établissement d'une suite, le valet (bourg) et le 9 (nel) prennent leur
+        place initiale (exemple: suite composée des cartes 8, 9, 10, valet, dame).
+    </p>
+    <h2 class="st license">- Licence -</h2>
+    <p>
+        La Potaillote est un jeu de carte librement distribué sous licence libre
+        <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><em>Creative Commons Attribution-ShareAlike (CC BY-SA)</em></a>.
+        Vous pouvez en faire ce que vous souhaitez du moment que les termes de ladite licence sont
+        respectés. La plus belle récompense que vous pourrez faire aux auteurs et contributeurs sera
+        de leur offrir une bière quand vous les croiserez.
+    </p>
+    <h3># Auteurs et contributeurs #</h3>
+    <div class="small">
+        <span class="ex">Par ordre alphabétique...</span>
+        <p style="padding-top:15px;">
+            Alexandre Kraft (<a href="mailto:a.kraft@free-it-foundation.org">prston</a>)<br />
+            Alexandre Poltorak (polto)<br />
+            Jean-François Ferry (jfefe)<br />
+            Kevin Velickovic (f0x)<br />
+            Lionel Lourdin (lionel)<br />
+            Malory Jessaume (<a href="mailto:m.jessaume@free-it-foundation.org">malory</a>)<br />
+            Xavier Gerber (kb'z)
+        </p>
+        <p style="padding-top:15px;">
+            Règles du jeu de la Potaillote V1 - Juin 2014<br />
+            <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Certains droits un peu réservés mais pas trop</a>
+        </p>
+    </div>
+
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://free-it-foundation.org/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 32]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://free-it-foundation.org/piwik/piwik.php?idsite=32" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+</body>
+</html>

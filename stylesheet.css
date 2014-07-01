@@ -1,0 +1,99 @@
+
+* {
+    margin:0;
+    padding:0;
+}
+
+html,
+body,
+h1,h2,h3,h4,h5,h6 {
+    color:#000;
+    font-size:16px;
+    font-family:'GNUTypewriter',Courier,serif;
+    font-weight:normal;
+    font-style:normal;
+    line-height:150%;
+}
+
+body {
+    background-color:#c7ac90;
+    background-image:url('bg.png');
+}
+
+h1 {
+    font-size:40px;
+    text-transform:uppercase;
+}
+
+h2 {
+    margin-top:40px;
+    margin-bottom:20px;
+    font-size:20px;
+    text-transform:uppercase;
+}
+
+h3 {
+    margin-top:20px;
+    margin-bottom:20px;
+    font-size:16px;
+    text-transform:uppercase;
+}
+
+h6 {
+    padding:0 30px;
+    font-size:14px;
+}
+
+p {
+    padding-bottom:25px;
+}
+
+a {
+    text-decoration:none;
+}
+
+
+a:link,a:visited,a:hover,a:active {
+    color:#555;
+    border-bottom:dotted 1px #555;
+}
+
+    a:hover,a:active {
+        color:#000;
+        border-bottom:dotted 1px #000;
+    }
+
+#main {
+    margin:0 auto;
+    padding:80px 50px;
+    width:700px;
+    text-align:center;
+}
+
+#logo {
+    padding:45px 0;
+}
+
+#goal,
+#mantra,
+div.border {
+    margin:20px auto;
+    margin-bottom:60px;
+    width:460px;
+    padding:15px;
+    border:dashed 1px #000;
+}
+
+div.small {
+    font-size:14px;
+}
+
+    div.small.border {
+        padding-top:25px;
+        padding-bottom:0;
+        font-size:16px;
+    }
+
+    div.small span.ex {
+        font-size:12px;
+    }
